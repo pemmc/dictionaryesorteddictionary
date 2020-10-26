@@ -55,13 +55,13 @@ namespace DictionaryeSortedDictionary
             */
 
             //Windows
-            //string path = @"C:\Users\apagar\Projects\DictionaryeSortedDictionary\file.txt";
+            //string path = @"C:\Users\apagar\Projects\DictionaryeSortedDictionary\DictionaryeSortedDictionaryfile.txt";
 
             //macOS note
-            //string path = "/Users/pauloeduardo/Projects/DictionaryeSortedDictionary/file.txt";
+            //string path = "/Users/pauloeduardo/Projects/DictionaryeSortedDictionary/DictionaryeSortedDictionary/file.txt";
 
             //macOS PC
-            string path = "/Users/nxgames/Projects/DictionaryeSortedDictionary/file.txt";
+            string path = "/Users/nxgames/Projects/DictionaryeSortedDictionary/DictionaryeSortedDictionary/file.txt";
 
             Console.WriteLine("Full path: " + path);
 
@@ -95,12 +95,21 @@ namespace DictionaryeSortedDictionary
                     {
                         Console.WriteLine(item.Key + ": " + item.Value);
                     }
+
+                    //ou usando o
+                    Console.WriteLine("USANDO O KeyValuePair já que o DICTIONARY é uma coleção também!");
+                    foreach (KeyValuePair<string, int> item in dictionary)
+                    {
+                        Console.WriteLine(item.Key + ": " + item.Value);
+
+                    }
                 }
             }
             catch (IOException e)
             {
                 Console.WriteLine("An error occurred");
                 Console.WriteLine(e.Message);
+
             }
 
         }
